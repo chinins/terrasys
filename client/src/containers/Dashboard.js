@@ -20,7 +20,7 @@ export default class Dashboard extends Component {
           <NoticeTable notices={data}></NoticeTable>
         </div>
 
-        <NewNotice></NewNotice>
+        <NewNotice onNoticeCreate={this.props.onNoticeCreate}></NewNotice>
 
       </div>
     )

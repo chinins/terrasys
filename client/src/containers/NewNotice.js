@@ -27,6 +27,8 @@ export default class NewNotice extends Component {
 
   submitForm = (e) => {
     e.preventDefault();
+    console.log('got here')
+    this.props.onNoticeCreate(this.state);
     this.setState({
       adminRefId: '',
       administration: '',
@@ -37,7 +39,7 @@ export default class NewNotice extends Component {
   render () {
     return (
       <div className="NewNotice">New Notice
-        <form className="new-notice-form">
+        <form className="new-notice-form" onSubmit={this.submitForm}>
           <input type="text" placeholder="AdminRefID" onChange={this.handleIdChange} value={this.state.adminRefId}></input>
           <input type="text" placeholder="Administration" onChange={this.handleAdminChange} value={this.state.administration}></input>
           <input type="text" placeholder="Assigned Frequency" onChange={this.handleFreqChange} value={this.state.freqAssigned}></input>
