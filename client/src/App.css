@@ -8,7 +8,7 @@
   align-items: baseline;
 }
 
-h1 {
+h1, h2 {
   padding-left: 35px;
   color: white;
 }
@@ -36,6 +36,12 @@ input {
   max-width: 800px;
   margin: 0 auto;
 }
+
+.NoticeTable {
+  background-color: #ebf5fb;
+  margin-top: 20px;
+}
+
 
 .NewNotice {
   background-color: #ebf5fb;

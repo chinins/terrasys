@@ -1,13 +1,46 @@
 import React, { Component } from 'react';
 
 export default class NewNotice extends Component {
+  state = {
+    adminRefId: '',
+    administration: '',
+    freqAssigned: ''
+  }
+
+  handleIdChange = (e) => {
+    this.setState({
+      adminRefId: e.target.value
+    })
+  }
+
+  handleAdminChange = (e) => {
+    this.setState({
+      administration: e.target.value
+    })
+  }
+
+  handleFreqChange = (e) => {
+    this.setState({
+      freqAssigned: Number(e.target.value)
+    })
+  }
+
+  submitForm = (e) => {
+    e.preventDefault();
+    this.setState({
+      adminRefId: '',
+      administration: '',
+      freqAssigned: ''
+    })
+  }
+
   render () {
     return (
       <div className="NewNotice">New Notice
         <form className="new-notice-form">
-          <input type="text" placeholder="id"></input>
-          <input type="text" placeholder="Country"></input>
-          <input type="text" placeholder="Assigned Frequency"></input>
+          <input type="text" placeholder="AdminRefID" onChange={this.handleIdChange} value={this.state.adminRefId}></input>
+          <input type="text" placeholder="Administration" onChange={this.handleAdminChange} value={this.state.administration}></input>
+          <input type="text" placeholder="Assigned Frequency" onChange={this.handleFreqChange} value={this.state.freqAssigned}></input>
           <input type="submit" value="Add Notice"></input>
         </form>
       </div>
