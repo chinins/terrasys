@@ -1,0 +1,76 @@
+.App {
+
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+h1 {
+  padding-left: 35px;
+  color: white;
+}
+
+.search {
+  padding-right: 30px;
+}
+
+input {
+  border: 1px solid #999;
+  padding-left: 10px;
+  height: 30px;
+  width: 200px;
+  border-radius: 4px;
+}
+
+.Dashboard {
+  display: flex;
+  justify-content: space-around;
+  /* background-color: #d6eaf8; */
+}
+
+.NoticeList {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.NewNotice {
+  background-color: #ebf5fb;
+  width: 20em;
+  text-align: center;
+  padding: 10px;
+  margin: 20px 60px 20px 0;
+  border: 1px solid darkblue;
+  box-shadow: 10px 10px 13px -4px #001f3f;
+  height: 250px;
+}
+
+.new-notice-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.new-notice-form input {
+  margin: 5px;
+}
+
+.new-notice-form input[type="submit"] {
+  background-color: #217dbb;
+  color: white;
+  border: none;
+  font-weight: bold;
+  width: 90px;
+}
+
+.Notice {
+  background-color: #ebf5fb;
+  border: 1px solid darkblue;
+  box-shadow: 10px 10px 13px -4px #001f3f;
+  margin: 20px;
+  padding: 20px;
+}
