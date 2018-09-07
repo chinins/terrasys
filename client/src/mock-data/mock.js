@@ -5,7 +5,7 @@ const notice1 = {
   administration: 'UK',
   freqAssigned: 111,
   fragment: 'Plan',
-  stateStage: 'Stage 1',
+  stage: 'Stage 1',
   date: 'Sep 22'
 }
 
@@ -14,7 +14,7 @@ const notice2 = {
   administration: 'USA',
   freqAssigned: 222,
   fragment: 'MIFR',
-  stateStage: 'Stage 2',
+  stage: 'Stage 2',
   date: 'Oct 22'
 }
 

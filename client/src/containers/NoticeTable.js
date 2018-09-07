@@ -20,7 +20,7 @@ export default class NoticeTable extends Component {
       accessor: 'fragment',
     }, {
       Header: 'State',
-      accessor: 'stateStage'
+      accessor: 'stage'
     }, {
       Header: 'Creation Date',
       accessor: 'date'
