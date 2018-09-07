@@ -40,7 +40,7 @@ export default class NewNotice extends Component {
     return (
       <div className="NewNotice">New Notice
         <form className="new-notice-form" onSubmit={this.submitForm}>
-          <input type="text" placeholder="AdminRefID" onChange={this.handleIdChange} value={this.state.adminRefId}></input>
+          <input type="text" placeholder="AdmRefID" onChange={this.handleIdChange} value={this.state.adminRefId}></input>
           <input type="text" placeholder="Administration" onChange={this.handleAdminChange} value={this.state.administration}></input>
           <input type="text" placeholder="Assigned Frequency" onChange={this.handleFreqChange} value={this.state.freqAssigned}></input>
           <input type="submit" value="Add Notice"></input>

@@ -13,7 +13,7 @@ const notice2 = {
   admRefId: '2',
   administration: 'USA',
   freqAssigned: 222,
-  fragment: 'MFID',
+  fragment: 'MIFR',
   stateStage: 'Stage 2',
   date: 'Oct 22'
 }
