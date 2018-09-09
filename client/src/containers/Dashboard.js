@@ -11,7 +11,7 @@ export default class Dashboard extends Component {
           <h2>
             <Link to="/details">Notice List</Link>
           </h2>
-          <NoticeTable notices={this.props.notices}></NoticeTable>
+          <NoticeTable notices={this.props.notices} onRowClick={this.props.onRowClick}></NoticeTable>
         </div>
       </div>
     )

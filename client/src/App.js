@@ -14,7 +14,8 @@ class App extends Component {
   constructor (props) {
     super (props);
     this.state = {
-      notices: noticeArray
+      notices: noticeArray,
+      selectedNotice: {}
     }
   }
 
@@ -23,15 +24,21 @@ class App extends Component {
     this.setState({
       notices: this.state.notices.concat(notice)
     })
+  }
 
+  displayDetails = (notice) => {
+    this.setState({
+      selectedNotice: notice
+    })
+    console.log(this.state.selectedNotice)
   }
 
   render() {
     return (
       <div className="App">
         <AppHeader/>
-        <Route exact={true} path="/" render={() => <Dashboard notices={this.state.notices}/>}/>
-        <Route path="/details" component={NoticeDetails}/>
+        <Route exact={true} path="/" render={() => <Dashboard notices={this.state.notices} onRowClick={this.displayDetails}/>}/>
+        <Route path={`/details/:${this.state.selectedNotice.admRefId}`} render={() => <NoticeDetails notice={this.state.selectedNotice}/>}/>
         <Route path="/new-notice" render={() => <NewNotice onNoticeCreate={this.createNotice}/>} />
       </div>
     );
