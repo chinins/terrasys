@@ -17,13 +17,13 @@ const NoticeSchema = new mongoose.Schema({
     type: Number,
     required: 'FreqAssign is required'
   },
-  stage: {
-    type: String,
-    default: 'Unknown'
+  validation: {
+    type: Boolean,
+    default: false
   },
-  fragment: {
-    type: String,
-    default: 'GEO6'
+  publishing: {
+    type: Boolean,
+    default: false
   }
 })
 

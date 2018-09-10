@@ -2,20 +2,22 @@
 
 const Notice = require('../models/notice');
 
-const getAll = ctx => {
-  console.log('got here');
-  Notice.find()
-    .then(notices => {
-      console.log('got here too');
-      ctx.body = [];
+const getAll = async ctx => {
+  ctx.body = await Notice.find();
+}
+
+const addNotice = async ctx => {
+  try {
+    await Notice.create({
+      admRefId: ctx.request.body.admRefId,
+      administration: ctx.request.body.administration,
+      freqAssign: ctx.request.body.freqAssign
     })
-}
-
-const getNotice = ctx => {
-
-}
-
-const addNotice = ctx => {
+    ctx.status = 200;
+  } catch (err) {
+    ctx.status = 400;
+    ctx.body = err.message;
+  }
 
 }
 
@@ -29,7 +31,6 @@ const updateFragment = ctx => {
 
 module.exports = {
   getAll,
-  getNotice,
   addNotice,
   updateStage,
   updateFragment
