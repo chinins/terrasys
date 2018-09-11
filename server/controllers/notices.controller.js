@@ -15,23 +15,41 @@ const addNotice = async ctx => {
     })
     ctx.status = 200;
   } catch (err) {
-    ctx.status = 400;
-    ctx.body = err.message;
+    ctx.throw(400, err.message);
   }
 
 }
 
-const updateStage = ctx => {
-
+const validateNotice = async ctx => {
+  try {
+    await Notice.findOneAndUpdate(
+      ctx.params.id, {
+      validation: 2
+    }, {
+      new: true
+    })
+    ctx.status = 200;
+  } catch (err) {
+    ctx.throw(400, err.message)
+  }
 }
 
-const updateFragment = ctx => {
-
+const publishNotice = async ctx => {
+  try {
+    await Notice.findByIdAndUpdate(ctx.params.id, {
+      published: true
+    }, {
+      new: true
+    })
+    ctx.status = 200;
+  } catch (err) {
+    ctx.throw(400, err.message);
+  }
 }
 
 module.exports = {
   getAll,
   addNotice,
-  updateStage,
-  updateFragment
+  validateNotice,
+  publishNotice
 }
