@@ -1,36 +1,50 @@
 import React, { Component } from 'react';
 import ReactTable from 'react-table';
 import "react-table/react-table.css";
-import Link from 'react-router-dom/Link';
+import moment from 'moment';
 
 export default class NoticeTable extends Component {
+  validateNotice = () => {
+
+  }
+
+  publishNotice = () => {
+
+  }
 
   render() {
 
     const columns = [{
       Header: 'AdmRefID',
       accessor: 'admRefId',
-      Cell: ({ row }) => (<Link to={`/details/:${row.admRefId}`}>{row.admRefId}</Link>)
     }, {
       Header: 'Administration',
       accessor: 'administration',
-      Cell: ({ row }) => (<Link to={`/details/:${row.admRefId}`}>{row.administration}</Link>)
     }, {
       Header: 'FreqAssign',
       accessor: 'freqAssigned',
-      Cell: ({ row }) => (<Link to={`/details/:${row.admRefId}`}>{row.freqAssigned}</Link>)
     }, {
-      Header: 'Fragment',
-      accessor: 'fragment',
-      Cell: ({ row }) => (<Link to={`/details/:${row.admRefId}`}>{row.fragment}</Link>)
+      Header: 'Validation',
+      accessor: 'validation',
+      Cell: row => (
+        <div>
+          <span>{row.original.validation}</span>
+          <button onClick={this.validateNotice}>Validate</button>
+        </div>
+      )
     }, {
-      Header: 'State',
-      accessor: 'stage',
-      Cell: ({ row }) => (<Link to={`/details/:${row.admRefId}`}>{row.stage}</Link>)
+      Header: 'Published',
+      accessor: 'published',
+      Cell: row => (
+        <div>
+          <span>{row.original.published ? 'Published' : 'Not published'}</span>
+          <button onClick={this.publishNotice}>Publish</button>
+        </div>
+      )
     }, {
-      Header: 'Creation Date',
-      accessor: 'date',
-      Cell: ({ row }) => (<Link to={`/details/:${row.admRefId}`}>{row.date}</Link>)
+      Header: 'Created',
+      id: 'dateTime',
+      accessor: data => moment(data.date).format('MMMM Do YYYY, h:mm a')
     }]
 
     return (

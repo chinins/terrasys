@@ -4,18 +4,18 @@ const notice1 = {
   admRefId: '1',
   administration: 'UK',
   freqAssigned: 111,
-  fragment: 'Plan',
-  stage: 'Stage 1',
-  date: 'Sep 22'
+  validation: 'Unknown',
+  published: false,
+  date: '2018-09-10T12:37:55.128Z'
 }
 
 const notice2 = {
   admRefId: '2',
   administration: 'USA',
   freqAssigned: 222,
-  fragment: 'MIFR',
-  stage: 'Stage 2',
-  date: 'Oct 22'
+  validation: 'Pass',
+  published: true,
+  date: '2018-09-10T12:37:55.128Z'
 }
 
 noticeArray.push(notice1);

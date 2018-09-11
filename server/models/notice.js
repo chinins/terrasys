@@ -18,8 +18,8 @@ const NoticeSchema = new mongoose.Schema({
     required: 'FreqAssign is required'
   },
   validation: {
-    type: Number,
-    default: 1  // 0 - fail, 1 - unknown, 2 - pass
+    type: String,
+    default: 'Unknown'  // unknown, fail, pass
   },
   published: {
     type: Boolean,

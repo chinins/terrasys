@@ -24,7 +24,7 @@ const validateNotice = async ctx => {
   try {
     await Notice.findOneAndUpdate(
       ctx.params.id, {
-      validation: 2
+      validation: 'Pass'
     }, {
       new: true
     })
