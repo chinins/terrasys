@@ -4,15 +4,16 @@ import NewNotice from './NewNotice';
 
 export default class Dashboard extends Component {
   render () {
+    const { ...properties } = this.props;
     return (
       <div className="Dashboard">
         <div className="NoticeList">
           <h2>
             Notice List
           </h2>
-          <NoticeTable notices={this.props.notices}></NoticeTable>
+          <NoticeTable {...properties}></NoticeTable>
         </div>
-        <NewNotice onNoticeCreate={this.props.createNotice}/>
+        <NewNotice onNoticeCreate={this.props.onNoticeCreate}/>
       </div>
     )
   }

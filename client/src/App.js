@@ -2,18 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 import AppHeader from './containers/AppHeader';
 import Dashboard from './containers/Dashboard';
-import noticeArray from './mock-data/mock';
-
-import NoticeDetails from './components/NoticeDetails';
-import { Route, Link } from 'react-router-dom';
-import NewNotice from './containers/NewNotice';
-
+import { noticeArray, messageArray } from './mock-data/mock';
+import BlockchainLog from './containers/BlockchainLog';
 
 class App extends Component {
   constructor (props) {
     super (props);
     this.state = {
-      notices: noticeArray
+      notices: noticeArray,
+      messages: messageArray
     }
   }
 
@@ -24,12 +21,22 @@ class App extends Component {
     })
   }
 
+  validateNotice = (notice) => {
+    console.log('validated', notice)
+  }
+
+  publishNotice = (notice) => {
+    console.log('published', notice);
+  }
+
+
   render() {
     return (
       <div className="App">
         <AppHeader/>
-        <Dashboard notices={this.state.notices} />
-        {/* onNoticeCreate={this.createNotice} */}
+        <Dashboard notices={this.state.notices} onNoticeCreate={this.createNotice}
+        onValidate={this.validateNotice} onPublish={this.publishNotice}/>
+        <BlockchainLog messages={this.state.messages}></BlockchainLog>
       </div>
     );
   }

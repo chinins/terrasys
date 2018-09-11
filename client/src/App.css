@@ -27,8 +27,6 @@ input {
 
 .Dashboard {
   display: flex;
-  /* justify-content: space-around; */
-  /* background-color: #d6eaf8; */
 }
 
 .NoticeList {
@@ -40,6 +38,9 @@ input {
 .NoticeTable {
   background-color: #ebf5fb;
   margin-top: 20px;
+  background-color: #ebf5fb;
+  border: 1px solid darkblue;
+  box-shadow: 10px 10px 13px -4px #001f3f;
 }
 
 
@@ -48,10 +49,10 @@ input {
   width: 20em;
   text-align: center;
   padding: 10px;
-  margin: 20px 60px 20px 0;
+  margin: 25px 30px 0 0;
   border: 1px solid darkblue;
   box-shadow: 10px 10px 13px -4px #001f3f;
-  height: 250px;
+  height: 265px;
 }
 
 .new-notice-form {
@@ -73,12 +74,20 @@ input {
   width: 90px;
 }
 
-.Notice {
-  display: flex;
-  flex-direction: column;
+.BlockchainLog {
   background-color: #ebf5fb;
   border: 1px solid darkblue;
   box-shadow: 10px 10px 13px -4px #001f3f;
-  margin: 20px;
+  max-width: 960px;
+  margin: 30px auto;
   padding: 20px;
+}
+
+.message {
+  padding: 10px;
+}
+
+.message-time {
+  padding-right: 10px;
+  font-weight: bold;
 }

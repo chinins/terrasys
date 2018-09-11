@@ -1,4 +1,5 @@
 const noticeArray = [];
+const messageArray = [];
 
 const notice1 = {
   admRefId: '1',
@@ -21,4 +22,22 @@ const notice2 = {
 noticeArray.push(notice1);
 noticeArray.push(notice2);
 
-module.exports = noticeArray;
+const mes1 = {
+  _id: 1,
+  title: 'Notice admRefId 111 was published to Blockchain',
+  dateTime: '2018-09-10T12:57:55.128Z'
+}
+
+const mes2 = {
+  _id: 2,
+  title: 'Notice admRefId 222 was published to Blockchain',
+  dateTime: '2018-09-10T13:57:55.128Z'
+}
+
+messageArray.push(mes1);
+messageArray.push(mes2);
+
+module.exports = {
+  noticeArray,
+  messageArray
+};

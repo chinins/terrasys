@@ -39,13 +39,13 @@ export default class NewNotice extends Component {
     return (
       <div className="NewNotice">New Notice
         <form className="new-notice-form" onSubmit={this.submitForm}>
-          <label>AdmRefID
+          <label>
             <input type="text" placeholder="AdmRefID" onChange={this.handleIdChange} value={this.state.admRefId}></input>
           </label>
-          <label>Administration
+          <label>
             <input type="text" placeholder="Administration" onChange={this.handleAdminChange} value={this.state.administration}></input>
           </label>
-          <label>Assigned Frequency
+          <label>
             <input type="text" placeholder="Assigned Frequency" onChange={this.handleFreqChange} value={this.state.freqAssigned}></input>
             </label>
           <input type="submit" value="Add Notice"></input>
