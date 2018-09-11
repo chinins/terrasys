@@ -4,13 +4,13 @@ import "react-table/react-table.css";
 import moment from 'moment';
 
 export default class NoticeTable extends Component {
-  validateNotice = () => {
+  // validateNotice = () => {
 
-  }
+  // }
 
-  publishNotice = () => {
+  // publishNotice = () => {
 
-  }
+  // }
 
   render() {
 
@@ -49,10 +49,6 @@ export default class NoticeTable extends Component {
 
     return (
       <ReactTable data={this.props.notices} columns={columns}
-        getTrProps={(state, rowInfo, column, instance) => ({
-
-          onClick: () => this.props.onRowClick(rowInfo.original)
-        })}
         defaultPageSize={this.props.notices.length} className="-striped -highlight"
         className="-striped -highlight NoticeTable"
       />

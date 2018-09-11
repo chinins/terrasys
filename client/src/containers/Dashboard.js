@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import NoticeTable from './NoticeTable';
-
-import { Route, Link } from 'react-router-dom';
+import NewNotice from './NewNotice';
 
 export default class Dashboard extends Component {
   render () {
@@ -9,10 +8,11 @@ export default class Dashboard extends Component {
       <div className="Dashboard">
         <div className="NoticeList">
           <h2>
-            <Link to="/details">Notice List</Link>
+            Notice List
           </h2>
-          <NoticeTable notices={this.props.notices} onRowClick={this.props.onRowClick}></NoticeTable>
+          <NoticeTable notices={this.props.notices}></NoticeTable>
         </div>
+        <NewNotice onNoticeCreate={this.props.createNotice}/>
       </div>
     )
   }
