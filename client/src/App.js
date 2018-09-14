@@ -30,10 +30,22 @@ class App extends Component {
   }
 
   createNotice = (notice) => {
-    console.log(notice);
-    this.setState({
-      notices: this.state.notices.concat(notice)
+    fetch(baseUrl, {
+      method: 'POST',
+      body: JSON.stringify({
+        admRefId: notice.admRefId,
+        administration: notice.administration,
+        freqAssign: notice.freqAssign
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     })
+    .then(() => this.fetchNotices());
+  }
+
+  postMessage = (message) => {
+
   }
 
   validateNotice = (notice) => {

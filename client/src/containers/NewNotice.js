@@ -4,7 +4,7 @@ export default class NewNotice extends Component {
   state = {
     admRefId: '',
     administration: '',
-    freqAssigned: ''
+    freqAssign: ''
   }
 
   handleIdChange = (e) => {
@@ -21,7 +21,7 @@ export default class NewNotice extends Component {
 
   handleFreqChange = (e) => {
     this.setState({
-      freqAssigned: Number(e.target.value)
+      freqAssign: Number(e.target.value)
     })
   }
 
@@ -31,7 +31,7 @@ export default class NewNotice extends Component {
     this.setState({
       admRefId: '',
       administration: '',
-      freqAssigned: ''
+      freqAssign: ''
     })
   }
 
