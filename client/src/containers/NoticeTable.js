@@ -22,7 +22,7 @@ export default class NoticeTable extends Component {
       accessor: 'administration',
     }, {
       Header: 'FreqAssign',
-      accessor: 'freqAssigned',
+      accessor: 'freqAssign',
     }, {
       Header: 'Created',
       id: 'dateTime',

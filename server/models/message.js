@@ -1,12 +1,11 @@
 const mongoose = require('mongoose');
 
 const MessageSchema = new mongoose.Schema({
-  title:{
+  title: {
     type: String,
     required: 'Title is required'
-  }
-}, {
-  dateTime:{
+  },
+  dateTime: {
     type: Date,
     default: Date.now
   }
