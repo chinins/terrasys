@@ -37,8 +37,7 @@ const postMessage = async ctx => {
 
 const validateNotice = async ctx => {
   try {
-    await Notice.findOneAndUpdate(
-      ctx.params.id, {
+    await Notice.findByIdAndUpdate(ctx.params.id, {
       validation: 'Pass'
     }, {
       new: true

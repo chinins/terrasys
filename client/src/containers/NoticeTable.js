@@ -49,7 +49,7 @@ export default class NoticeTable extends Component {
 
     return (
       <ReactTable data={this.props.notices} columns={columns}
-        defaultPageSize={5} className="-striped -highlight NoticeTable"
+        defaultPageSize={10} className="-striped -highlight NoticeTable"
       />
     )
   }

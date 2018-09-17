@@ -46,7 +46,7 @@ export default class NewNotice extends Component {
             <input type="text" placeholder="Administration" onChange={this.handleAdminChange} value={this.state.administration}></input>
           </label>
           <label>
-            <input type="text" placeholder="Assigned Frequency" onChange={this.handleFreqChange} value={this.state.freqAssigned}></input>
+            <input type="number" placeholder="Assigned Frequency" onChange={this.handleFreqChange} value={this.state.freqAssign}></input>
             </label>
           <input type="submit" value="Add Notice"></input>
         </form>

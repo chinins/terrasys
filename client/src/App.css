@@ -13,9 +13,7 @@ h1, h2 {
   color: white;
 }
 
-.search {
-  padding-right: 30px;
-}
+
 
 input {
   border: 1px solid #999;
@@ -29,6 +27,17 @@ input {
   display: flex;
 }
 
+.title-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.search {
+  /* padding-right: 30px; */
+  /* padding-left: 20px; */
+}
+
 .NoticeList {
   flex: 1;
   max-width: 800px;
@@ -37,22 +46,25 @@ input {
 
 .NoticeTable {
   background-color: #ebf5fb;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   background-color: #ebf5fb;
   border: 1px solid darkblue;
   box-shadow: 10px 10px 13px -4px #001f3f;
 }
 
+button {
+  margin-left: 10px;
+}
 
 .NewNotice {
   background-color: #ebf5fb;
   width: 20em;
   text-align: center;
-  padding: 10px;
-  margin: 25px 30px 0 0;
+  padding: 30px 5px 5px 5px;
+  margin: 68px 30px 0 0;
   border: 1px solid darkblue;
   box-shadow: 10px 10px 13px -4px #001f3f;
-  height: 265px;
+  height: 380px;
 }
 
 .new-notice-form {
@@ -67,6 +79,7 @@ input {
 }
 
 .new-notice-form input[type="submit"] {
+  margin-top: 20px;
   background-color: #217dbb;
   color: white;
   border: none;
@@ -90,4 +103,8 @@ input {
 .message-time {
   padding-right: 10px;
   font-weight: bold;
+}
+
+.app-footer {
+  padding: 0 0 10px 10px;
 }
