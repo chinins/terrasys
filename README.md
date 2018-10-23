@@ -2,7 +2,7 @@
 Terrasys is a proof of concept to store assigned frequencies on the etherium bloclchain. It's goal is to enhance a legacy system to become a blockchain dapp. Smart contract and blockchain implementation is work in progress.
 
 ## Screeshot
-<img src="./src/assets/screenshot.png"/>
+<img src="./client/src/assets/screenshot.png"/>
 
 ## Getting Started
 ### Prerequisites
