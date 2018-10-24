@@ -40,5 +40,5 @@ $ npm start
 - [Koa](https://koajs.com/) - web framework for node.js
 - [MongoDB](https://www.mongodb.com/) - document-oriented database program
 
-## Authors
+## Author
 - Olga Chinina - [Github](https://github.com/chinins)
