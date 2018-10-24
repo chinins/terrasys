@@ -15,7 +15,7 @@ $ git clone https://github.com/chinins/terrasys.git
 ```
 2. **Install dependencies on the server side**
 ```
-$ cd coffee-chain-server
+$ cd server
 $ npm install
 ```
 3. **Start MongoDb**
